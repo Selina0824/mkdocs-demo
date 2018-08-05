@@ -1,0 +1,36 @@
+{% raw %}
+<script id="mindsphere-footer" type="x-tmpl-mustache">
+	<div class="mindsphereFooter">
+		{{#signupTeaser}}
+			<h2 class="mindsphereFooter__headline">{{headline}}</h2>
+			<p class="mindsphereFooter__lead">{{subHeadline}}</p>
+			{{#signupButton}}
+				<a class="mindsphereFooter__accessBtn" href="{{href}}" target="_blank">{{text}}</a>
+			{{/signupButton}}
+		{{/signupTeaser}}
+		{{#learnMore}}
+			<h3 class="mindsphereFooter__learnMore">{{headline}}</h3>
+			<nav class="mindsphereFooter__share">
+				{{#shareLinks}}
+					<a class="mindsphereFooter__shareItem mindsphereFooter__shareItem--{{icon}}" href="{{href}}" target="_blank"></a>
+				{{/shareLinks}}
+			</nav>
+			<nav class="mindsphereFooter__links">
+				{{#metaLinks}}
+					<a class="mindsphereFooter__linksItem" href="{{href}}" target="_blank">{{text}}</a>
+				{{/metaLinks}}
+			</nav>
+		{{/learnMore}}
+		{{#legal}}
+			<p class="mindsphereFooter__legal">
+				{{copyright}}
+				<span>
+					{{#links}}
+						<a class="mindsphereFooter__legalLink" href="{{href}}" target="_blank">{{text}}</a>
+					{{/links}}
+				</span>
+			</p>
+		{{/legal}}
+	</div>
+</script>
+{% endraw %}

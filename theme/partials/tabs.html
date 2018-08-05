@@ -1,0 +1,19 @@
+{% set class = "md-tabs" %}
+{% if page.ancestors | length > 0 %}
+  {% set class = "md-tabs md-tabs--active" %}
+{% endif %}
+<nav class="{{ class }}" data-md-component-off="tabs">
+  <div class="md-tabs__inner">
+    <ul class="md-tabs__list">
+	  {% for nav_item in nav %}
+        {% include "partials/tabs-item.html" %}
+      {% endfor %}
+      <li class="md-tabs__item">
+        <a class="md-tabs__link" href="{{ config.extra.community.community_button_default_href }}" target="_blank">
+          <svg width="10" height="10"><use href="#external"/></svg>
+          Community
+        </a>
+      </li>
+   </ul>
+  </div>
+</nav>
